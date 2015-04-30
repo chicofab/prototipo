@@ -5,6 +5,63 @@
 		<title>Siena Idea</title>
 	</head>
 	<body>
-		<h1>Titulo do Evento</h1>
+		<header class="informations">
+			<img src="img/avatar1.gif" alt="Palestrante" class="informations__speakerIMG"/>
+			<h1>Titulo do Evento</h1>
+			<h2>Resumo do evento</h2>
+			<h4>Resumo das qualificações do palestrante</h4>
+			<h6><a href="#">Ver mais informações</a></h6>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Enviar questão</a></li>
+				<li><a href="#">Responder questão</a></li>
+			</ul>
+		</nav>
+		<div class="questions">
+			<section class="questions__question is-answered">
+				<div class="questions__question_q">
+					<p>Pergunta feita pelo aluno</p>
+					<div class="options">
+						<p>
+							<input type="button" value="curtir">
+							<span class="likes"></span>
+						</p>
+					</div>
+				</div>
+				<div class="questions__question_a is-hidden">
+					<p>Resposta dada pelo professor</p>
+					<div class="options">
+						<p>
+							<input type="button" value="curtir">
+							<span class="likes"></span>
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="questions__question is-notAnswered">
+				<div class="questions__question_q">
+					<p>Pergunta feita pelo aluno</p>
+					<div class="options">
+						<p>
+							<input type="button" value="curtir">
+							<span class="likes"></span>
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="questions__question is-notAnswered">
+				<div class="questions__question_q">
+					<p>Pergunta feita pelo aluno</p>
+					<div class="options">
+						<p>
+							<input type="button" value="curtir">
+							<span class="likes"></span>
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
 	</body>
 </html>
