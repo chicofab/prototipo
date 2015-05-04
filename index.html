@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
+		<!-- Just for debugging purposes. Don't actually copy this line! -->
+		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		<meta name="author" content="">
 
+		<title>Página Principal</title>
+
 		<script src="js/angular.js"></script>
 		<script>
 			angular.module("prototipo", []).controller("prototipoCtrl", function($scope){
 				$scope.visivel = false;
-$scope.string="ver resposta";
-$scope.verResposta=function(visivel){
-$scope.visivel=!visivel;
-	$scope.string= ($scope.visivel) ? "esconder resposta" : "ver resposta";
-};
+				$scope.string="ver resposta";
+				$scope.verResposta=function(visivel){
+					$scope.visivel = !visivel;
+					$scope.string= ($scope.visivel) ? "esconder resposta" : "ver resposta";
+				};
 			});
 		</script>
 
-		<title>Bootstrap 3 Vertical Menu</title>
-
-		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-
 		<style type="text/css">
+			/*#REGION Bootstrap CSS*/
 			/* make sidebar nav vertical */
 			@media (min-width: 768px) {
 				.sidebar-nav .navbar .navbar-collapse {
@@ -65,24 +71,15 @@ $scope.visivel=!visivel;
 					width: 262px;
 				}
 			}
-			.sidebar-nav .navbar-header{ float: none; }
+			.sidebar-nav .navbar-header{
+				float: none;
+			}
+			/*#ENDREGION Bootstrap CSS*/
 		</style>
-
-
-		<!-- Just for debugging purposes. Don't actually copy this line! -->
-		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
 	</head>
 
 	<body ng-app="prototipo">
-
 		<div class="container">
-
 			<div class="row">
 				<div class="jumbotron">
 					<div class="media">
@@ -124,36 +121,33 @@ $scope.visivel=!visivel;
 					</div>
 				</div>
 				<div class="col-sm-9">
-<div ng-controller="prototipoCtrl">
+					<div ng-controller="prototipoCtrl">
 					<div class="alert alert-info fade in" >
-						<strong>Questão respondida.</strong> <p><a ng-click="verResposta(visivel)">{{string}}</a> <a>Curtir</a> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></p>
+						<p><strong>Questão respondida.</strong></p>
+						<p><a ng-click="verResposta(visivel)">{{string}}</a> <a>Curtir</a> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></p>
 					</div>
-	<div class="alert alert-success fade in" ng-if="visivel">
-		<strong>Resposta</strong> <p> <a>Curtir</a> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></p>
-	</div>
+					<div class="alert alert-success fade in" ng-if="visivel">
+						<p><strong>Resposta</strong></p>
+						<p><a>Curtir</a> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></p>
 					</div>
-
-					<div class="alert alert-warning">
-						<strong>Questão ainda sem resposta.</strong>
-						<p><a>Responder</a> <a>Curtir</a> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-						</p>
 					</div>
 
 					<div class="alert alert-warning">
-						<strong>Questão ainda sem resposta.</strong><p><a>Responder</a> <a>Curtir</a> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></p>
+						<p><strong>Questão ainda sem resposta.</strong></p>
+						<p><a>Responder</a> <a>Curtir</a> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></p>
+					</div>
+					<div class="alert alert-warning">
+						<p><strong>Questão ainda sem resposta.</strong></p>
+						<p><a>Responder</a> <a>Curtir</a> <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></p>
 					</div>
 				</div>
 			</div>
-
 		</div><!-- /.container -->
 
 
-		<!-- Bootstrap core JavaScript
-================================================== -->
+		<!-- Bootstrap core JavaScript -->
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-=======
-
 	</body>
 </html>
